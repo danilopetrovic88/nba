@@ -12,4 +12,14 @@
     </li>
     @endforeach
 </ul>
+<div class="container mt-3">
+    @foreach($comments as $comment)
+    <blockquote>{{ $comment->title }}</blockquote>
+    @endforeach
+    <form action="#">
+        @csrf
+        <input type="text" name="content" placeholder="Leave comment" class="form-control"><br>
+        <button class="btn btn-success btn-sm m-2">Commnet</button>
+    </form>
+</div>
 @endsection
